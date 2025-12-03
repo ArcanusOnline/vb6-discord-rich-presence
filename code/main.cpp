@@ -33,11 +33,7 @@ extern "C" __declspec(dllexport) void __stdcall ab1_discord_presence_set_with_as
     ab1::VB6String largeImageKey,
     ab1::VB6String largeImageText,
     ab1::VB6String smallImageKey,
-    ab1::VB6String smallImageText,
-    ab1::VB6String button1Label,
-    ab1::VB6String button1Url,
-    ab1::VB6String button2Label,
-    ab1::VB6String button2Url) {
+    ab1::VB6String smallImageText) {
     auto presence = DiscordRichPresence {};
 
     presence.state = state;
@@ -57,26 +53,6 @@ extern "C" __declspec(dllexport) void __stdcall ab1_discord_presence_set_with_as
 
     if (!is_empty(smallImageText)) {
         presence.smallImageText = smallImageText;
-    }
-
-    DiscordRichPresenceButton buttons[2];
-    int buttonCount = 0;
-
-    if (!is_empty(button1Label) && !is_empty(button1Url)) {
-        buttons[buttonCount].label = button1Label;
-        buttons[buttonCount].url = button1Url;
-        ++buttonCount;
-    }
-
-    if (!is_empty(button2Label) && !is_empty(button2Url)) {
-        buttons[buttonCount].label = button2Label;
-        buttons[buttonCount].url = button2Url;
-        ++buttonCount;
-    }
-
-    if (buttonCount > 0) {
-        presence.buttons = buttons;
-        presence.buttonCount = buttonCount;
     }
 
     Discord_UpdatePresence(&presence);
