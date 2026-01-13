@@ -3,6 +3,7 @@
 #include "types.hpp"
 
 extern "C" __declspec(dllexport) void __stdcall ab1_discord_initialize(ab1::VB6String clientID);
+extern "C" __declspec(dllexport) void __stdcall ab1_discord_run_callbacks(); // <--- LA NUEVA
 extern "C" __declspec(dllexport) void __stdcall ab1_discord_release();
 
 extern "C" __declspec(dllexport) void __stdcall ab1_discord_presence_set(ab1::VB6String state, ab1::VB6String details);
