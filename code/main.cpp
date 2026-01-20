@@ -71,6 +71,36 @@ extern "C" __declspec(dllexport) void __stdcall ab1_discord_presence_set_with_as
     Discord_UpdatePresence(&presence);
 }
 
+extern "C" __declspec(dllexport) void __stdcall ab1_discord_presence_set_with_assets_and_buttons(
+    ab1::VB6String state,
+    ab1::VB6String details,
+    ab1::VB6String largeImageKey,
+    ab1::VB6String largeImageText,
+    ab1::VB6String smallImageKey,
+    ab1::VB6String smallImageText,
+    ab1::VB6String button1Label,
+    ab1::VB6String button1Url,
+    ab1::VB6String button2Label,
+    ab1::VB6String button2Url) {
+    
+    auto presence = DiscordRichPresence {};
+
+    presence.state = state;
+    presence.details = details;
+
+    if (!is_empty(largeImageKey)) presence.largeImageKey = largeImageKey;
+    if (!is_empty(largeImageText)) presence.largeImageText = largeImageText;
+    if (!is_empty(smallImageKey)) presence.smallImageKey = smallImageKey;
+    if (!is_empty(smallImageText)) presence.smallImageText = smallImageText;
+
+    if (!is_empty(button1Label)) presence.button1Label = button1Label;
+    if (!is_empty(button1Url)) presence.button1Url = button1Url;
+    if (!is_empty(button2Label)) presence.button2Label = button2Label;
+    if (!is_empty(button2Url)) presence.button2Url = button2Url;
+
+    Discord_UpdatePresence(&presence);
+}
+
 extern "C" __declspec(dllexport) void __stdcall ab1_discord_presence_clear() {
     Discord_ClearPresence();
 }

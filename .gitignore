@@ -35,4 +35,12 @@
 build/
 
 # Visual Studio Code
+# Visual Studio Code
 .vscode/
+
+# Debug files
+*.ilk
+*.pdb
+*.exp
+debug_*.txt
+tests/debug_*.txt

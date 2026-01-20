@@ -5,4 +5,5 @@ EXPORTS
     ab1_discord_release
     ab1_discord_presence_set
     ab1_discord_presence_set_with_assets
+    ab1_discord_presence_set_with_assets_and_buttons
     ab1_discord_presence_clear

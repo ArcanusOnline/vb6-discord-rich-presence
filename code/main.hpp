@@ -14,4 +14,15 @@ extern "C" __declspec(dllexport) void __stdcall ab1_discord_presence_set_with_as
     ab1::VB6String largeImageText,
     ab1::VB6String smallImageKey,
     ab1::VB6String smallImageText);
+extern "C" __declspec(dllexport) void __stdcall ab1_discord_presence_set_with_assets_and_buttons(
+    ab1::VB6String state,
+    ab1::VB6String details,
+    ab1::VB6String largeImageKey,
+    ab1::VB6String largeImageText,
+    ab1::VB6String smallImageKey,
+    ab1::VB6String smallImageText,
+    ab1::VB6String button1Label,
+    ab1::VB6String button1Url,
+    ab1::VB6String button2Label,
+    ab1::VB6String button2Url);
 extern "C" __declspec(dllexport) void __stdcall ab1_discord_presence_clear();
