@@ -1,2 +1,4 @@
 [History]
-1=#P0#=mb	#P1#=Main	#P2#=prjTest/modMain/Main	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20260120175847	#P7#=0	#P8#=2	.
+1=#P0#=mb	#P1#=Form_Load	#P2#=prjTest/Form1/Form_Load	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20260120182614	#P7#=0	#P8#=8	.
+2=#P0#=mb	#P1#=ActualizarMapa	#P2#=prjTest/Form1/ActualizarMapa	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20260120182601	#P7#=0	#P8#=5	.
+3=#P0#=mb	#P1#=Command1_Click	#P2#=prjTest/Form1/Command1_Click	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20260120182232	#P7#=0	#P8#=2	.
